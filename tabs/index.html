@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue lab</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.24/css/bulma.min.css">
+
+	<style type="text/css">
+		
+		body{
+			padding-top: 20px;
+		}
+
+	</style>
+</head>
+<body>
+
+<div id="root" class="container">
+	
+
+	<tabs> 
+
+		<tab name="About us" :selected="true">
+			<h1>The about us content</h1>
+			bar
+		</tab>
+
+		<tab name="About the company">
+			<h1>The about the company content</h1>
+			foo
+		</tab>
+
+		<tab name="Contact">
+			<h1>The contact content</h1>
+			jazz
+		</tab>
+
+	</tabs>	
+
+		
+</div>
+
+
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

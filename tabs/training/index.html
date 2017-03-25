@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue lab</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.24/css/bulma.min.css">
+
+	<style type="text/css">
+		
+		body{
+			padding-top: 20px;
+		}
+
+	</style>
+</head>
+<body>
+
+<div id="root" class="container">
+	
+	
+	<sidebar>
+
+		<items :list="this.list"></items>
+		<items :list="[
+			{
+				name: 'Programming', 
+				items: [
+					{value: 'GitHub', href: 'http://github.com'},
+					{value: 'Laravel', href: 'http://laravel.com'},
+					{value: 'Vue.js', href: 'http://vuejs.org'}
+				]			
+			}
+		]"></items>
+
+	</sidebar>	
+	
+	<aside class="menu">
+
+	  <p class="menu-label">
+	    General
+	  </p>
+
+	  <ul class="menu-list">
+	    <li><a>Dashboard</a></li>
+	    <li><a>Customers</a></li>
+	  </ul>
+
+	  <p class="menu-label">
+	    Administration
+	  </p>
+
+	  <ul class="menu-list">
+	    <li><a>Team Settings</a></li>
+	    <li>
+	      <a class="is-active">Manage Your Team</a>
+	      <ul>
+	        <li><a>Members</a></li>
+	        <li><a>Plugins</a></li>
+	        <li><a>Add a member</a></li>
+	      </ul>
+	    </li>
+	    <li><a>Invitations</a></li>
+	    <li><a>Cloud Storage Environment Settings</a></li>
+	    <li><a>Authentication</a></li>
+	  </ul>
+
+
+	  <p class="menu-label">
+	    Transactions
+	  </p>
+	  <ul class="menu-list">
+	    <li><a>Payments</a></li>
+	    <li><a>Transfers</a></li>
+	    <li><a>Balance</a></li>
+	  </ul>
+
+	</aside>
+
+</div>
+
+
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
