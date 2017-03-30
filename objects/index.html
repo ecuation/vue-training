@@ -22,14 +22,27 @@
 	});
 
 
-	Accomodation.prototype.lock = function(){
+	Accomodation.prototype.lock = function()
+	{
 		this.isLocked = true;	
+		return this;
+	};
+
+	Accomodation.prototype.unlock = function()
+	{
+		this.isLocked = false;	
+		return this;
 	};
 
 
-	console.log(accomodation.isLocked);
-	
-	accomodation.lock();
+	Accomodation.prototype.alarm = function()
+	{
+		alert('alert!!');
+		return this;
+	};
+
+
+	accomodation.lock().alarm().unlock();
 
 	console.log(accomodation.isLocked);
 
