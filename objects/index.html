@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<script>
+	var Accomodation = function (defaults)
+	{
+		defaults = defaults || {};
+
+		this.floors = defaults.floors || 0;
+		this.rooms = defaults.rooms || 0;
+		this.sharedEntrance = defaults.sharedEntrance || false;
+		this.isLocked = defaults.isLocked || false;
+
+		return this;
+	};
+
+	var accomodation = new Accomodation({
+		floors: 8
+	});
+
+
+	Accomodation.prototype.lock = function(){
+		this.isLocked = true;	
+	};
+
+
+	console.log(accomodation.isLocked);
+	
+	accomodation.lock();
+
+	console.log(accomodation.isLocked);
+
+</script>
+
+</head>
+<body>
+	
+</body>
+</html>
